@@ -1,0 +1,17 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "msGraphSecretKeyName",
+      "environmentVariableName": "MSGraphSecretKeyName"
+    }
+  ],
+  "permissions": {
+    "api": {
+      "presolvedteamsadmin": [
+        "Query",
+        "Mutation"
+      ]
+    }
+  }
+}

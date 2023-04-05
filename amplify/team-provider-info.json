@@ -27,7 +27,12 @@
           "s3Key": "amplify-builds/MSTeamsClientsAPI-4b6e45686536314d7930-build.zip",
           "callManagerUrl": "https://td7y4pmq4a.execute-api.us-east-1.amazonaws.com/staging"
         },
-        "graphQlLambdaAuthorizerd08aa087": {}
+        "graphQlLambdaAuthorizerd08aa087": {},
+        "downloadPSTNCallLogs": {
+          "msGraphSecretKeyName": "presolved/reports/key",
+          "deploymentBucketName": "amplify-presolvedteamsadmin-develop-201120-deployment",
+          "s3Key": "amplify-builds/downloadPSTNCallLogs-6f374e5049734a796e6b-build.zip"
+        }
       },
       "api": {
         "AdminQueries": {},

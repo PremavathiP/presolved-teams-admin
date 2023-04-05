@@ -48,6 +48,12 @@ export type AmplifyDependentResourcesAttributes = {
             "Region": "string",
             "LambdaExecutionRole": "string",
             "LambdaExecutionRoleArn": "string"
+        },
+        "downloadPSTNCallLogs": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
         }
     },
     "hosting": {

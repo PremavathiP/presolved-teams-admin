@@ -148,14 +148,12 @@ type ClientCallLogs
         groups: ["p3fAdmin"]
         operations: [read, create, update, delete]
       }
+      { allow: public, operations: [create, read] }
     ]
   ) {
-  RecordingId: String!
-  tenantId: ID! @index(name: "byTenantId", sortKeyFields: ["contactId"])
-  callId: ID! @primaryKey
-  contactId: ID!
-  callType: String!
-  callStatus: String!
+  tenantId: ID! @index(name: "byTenantId")
+  callId: ID! @primaryKey  
+  callType: String!  
   callStartTime: AWSDateTime!
   callEndTime: AWSDateTime!
   callDuration: Int!

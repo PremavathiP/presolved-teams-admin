@@ -200,41 +200,15 @@ export const deleteClientUserWhitelisting = /* GraphQL */ `
     }
   }
 `;
-export const createClientCallLogs = /* GraphQL */ `
-  mutation CreateClientCallLogs(
-    $input: CreateClientCallLogsInput!
-    $condition: ModelClientCallLogsConditionInput
-  ) {
-    createClientCallLogs(input: $input, condition: $condition) {
-      RecordingId
-      tenantId
-      callId
-      contactId
-      callType
-      callStatus
-      callStartTime
-      callEndTime
-      callDuration
-      charge
-      callerNumber
-      calleeNumber
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const updateClientCallLogs = /* GraphQL */ `
   mutation UpdateClientCallLogs(
     $input: UpdateClientCallLogsInput!
     $condition: ModelClientCallLogsConditionInput
   ) {
     updateClientCallLogs(input: $input, condition: $condition) {
-      RecordingId
       tenantId
       callId
-      contactId
       callType
-      callStatus
       callStartTime
       callEndTime
       callDuration
@@ -252,12 +226,9 @@ export const deleteClientCallLogs = /* GraphQL */ `
     $condition: ModelClientCallLogsConditionInput
   ) {
     deleteClientCallLogs(input: $input, condition: $condition) {
-      RecordingId
       tenantId
       callId
-      contactId
       callType
-      callStatus
       callStartTime
       callEndTime
       callDuration
@@ -356,6 +327,26 @@ export const createClientUsers = /* GraphQL */ `
       email
       role
       status
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createClientCallLogs = /* GraphQL */ `
+  mutation CreateClientCallLogs(
+    $input: CreateClientCallLogsInput!
+    $condition: ModelClientCallLogsConditionInput
+  ) {
+    createClientCallLogs(input: $input, condition: $condition) {
+      tenantId
+      callId
+      callType
+      callStartTime
+      callEndTime
+      callDuration
+      charge
+      callerNumber
+      calleeNumber
       createdAt
       updatedAt
     }

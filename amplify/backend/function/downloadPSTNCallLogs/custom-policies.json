@@ -1,0 +1,20 @@
+[
+  {
+    "Action": ["secretmanager:GetSecret", "secretsmanager:GetSecretValue"],
+    "Resource": [
+      {
+        "Fn::Sub": [
+          "arn:aws:secretsmanager:${region}:${account}:secret:*",
+          {
+            "region": {
+              "Ref": "AWS::Region"
+            },
+            "account": {
+              "Ref": "AWS::AccountId"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
