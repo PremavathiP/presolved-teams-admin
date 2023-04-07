@@ -1,7 +1,6 @@
 const GRAPHQL_ENDPOINT = process.env.API_PRESOLVEDTEAMSADMIN_GRAPHQLAPIENDPOINTOUTPUT;
 const GRAPHQL_API_KEY = process.env.API_PRESOLVEDTEAMSADMIN_GRAPHQLAPIKEYOUTPUT;
 
-
 class CallRecords {
     constructor() {
         //this.graphql = require('graphql-request');
@@ -20,7 +19,7 @@ class CallRecords {
         ) {
           createClientCallLogs(input: $input, condition: $condition) {            
             tenantId
-            callId            
+            callRecordId            
             callType            
             callStartTime
             callEndTime
@@ -61,7 +60,18 @@ class CallRecords {
         
         return response;    
     }
-       
+ // write a function to signature version 4 sign the aws api request
+    async signRequest(request) {
+        // get temporary credentials for lambda function
+        const credentials = await this.getCredentials();       
+        const signer = new AWS.Signers.V4(request, 'execute-api');
+        signer.addAuthorization(credentials, new Date());
+        return request;
+    }
+
+ 
+ 
+ 
        
 }
 module.exports = CallRecords;

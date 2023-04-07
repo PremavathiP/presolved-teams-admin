@@ -133,7 +133,7 @@ type clientUserWhitelisting
 }
 
 type ClientCallLogs
-  @model
+  @model  
   @auth(
     rules: [
       {
@@ -152,7 +152,7 @@ type ClientCallLogs
     ]
   ) {
   tenantId: ID! @index(name: "byTenantId")
-  callId: ID! @primaryKey  
+  callRecordId: ID! @primaryKey  
   callType: String!  
   callStartTime: AWSDateTime!
   callEndTime: AWSDateTime!

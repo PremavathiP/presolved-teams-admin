@@ -8,7 +8,7 @@ const downloadPSTNLogs = async () => {
     let settings = await appSettings.getSettings();
     // get date for last week
     let tempDate = new Date();
-    tempDate.setDate(tempDate.getDate() - 10);
+    tempDate.setDate(tempDate.getDate() - 2);
     console.log('From DATE ---->', tempDate);
     let fromDate = new Date(tempDate).toISOString();
     let toDate = new Date().toISOString();
@@ -30,7 +30,7 @@ const downloadPSTNLogs = async () => {
         let callRecordInput = {
            
             tenantId: "P3Fusion",
-            callId: callRecord.id, // callId: '268450757_91522593@216.82.227.205',
+            callRecordId: callRecord.id, //  id: 'dfe8b123-45b0-4239-98c6-3e8973a4511e',
             callType: callRecord.callType, //'ucap_in'   // means bot call        
             callStartTime: callRecord.startDateTime, //startDateTime: '2023-04-04T04:35:37.4464007Z',
             callEndTime: callRecord.endDateTime, //endDateTime: '2023-04-04T04:35:53.4464007Z',
@@ -42,7 +42,7 @@ const downloadPSTNLogs = async () => {
             //updatedAt: callRecordUpdatedAt
            
         };
-        console.log(`Saving call record ${callRecordInput.callId}`);
+        console.log(`Saving call record ${callRecordInput.callRecordId}`);
         let response = await callRecordsApi.writeCallRecord(callRecordInput);
         console.log(response);
     }

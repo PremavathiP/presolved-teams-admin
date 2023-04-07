@@ -251,7 +251,7 @@ export const onCreateClientCallLogs = /* GraphQL */ `
   subscription OnCreateClientCallLogs($tenantId: String) {
     onCreateClientCallLogs(tenantId: $tenantId) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime
@@ -268,7 +268,7 @@ export const onUpdateClientCallLogs = /* GraphQL */ `
   subscription OnUpdateClientCallLogs($tenantId: String) {
     onUpdateClientCallLogs(tenantId: $tenantId) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime
@@ -285,7 +285,7 @@ export const onDeleteClientCallLogs = /* GraphQL */ `
   subscription OnDeleteClientCallLogs($tenantId: String) {
     onDeleteClientCallLogs(tenantId: $tenantId) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime

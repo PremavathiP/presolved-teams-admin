@@ -228,6 +228,7 @@ async function listGroupsForUser(username, Limit, NextToken) {
 
 async function createUser(username, password, email, attributes, groupname) {
   const params = {
+    "DesiredDeliveryMediums":  ["EMAIL" ],
     UserPoolId: userPoolId,
     Username: username,
     TemporaryPassword: password,

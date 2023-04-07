@@ -209,10 +209,10 @@ export const listClientUsers = /* GraphQL */ `
   }
 `;
 export const getClientCallLogs = /* GraphQL */ `
-  query GetClientCallLogs($callId: ID!) {
-    getClientCallLogs(callId: $callId) {
+  query GetClientCallLogs($callRecordId: ID!) {
+    getClientCallLogs(callRecordId: $callRecordId) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime
@@ -227,14 +227,14 @@ export const getClientCallLogs = /* GraphQL */ `
 `;
 export const listClientCallLogs = /* GraphQL */ `
   query ListClientCallLogs(
-    $callId: ID
+    $callRecordId: ID
     $filter: ModelClientCallLogsFilterInput
     $limit: Int
     $nextToken: String
     $sortDirection: ModelSortDirection
   ) {
     listClientCallLogs(
-      callId: $callId
+      callRecordId: $callRecordId
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -242,7 +242,7 @@ export const listClientCallLogs = /* GraphQL */ `
     ) {
       items {
         tenantId
-        callId
+        callRecordId
         callType
         callStartTime
         callEndTime

@@ -189,15 +189,16 @@ const UsersManagement = () => {
 
     const myInit = {
       body: {
+        
         username: email,
         email: email,
         password: password,
         groupname: role,
         userAttributes: JSON.stringify([
-          // {
-          //     Name: "phone_number",
-          //     Value: phone,
-          // },
+          {
+               Name: "phone_number",
+               Value: phone,
+          },
           {
             Name: "name",
             Value: name,

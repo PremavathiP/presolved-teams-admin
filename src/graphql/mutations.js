@@ -207,7 +207,7 @@ export const updateClientCallLogs = /* GraphQL */ `
   ) {
     updateClientCallLogs(input: $input, condition: $condition) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime
@@ -227,7 +227,7 @@ export const deleteClientCallLogs = /* GraphQL */ `
   ) {
     deleteClientCallLogs(input: $input, condition: $condition) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime
@@ -339,7 +339,7 @@ export const createClientCallLogs = /* GraphQL */ `
   ) {
     createClientCallLogs(input: $input, condition: $condition) {
       tenantId
-      callId
+      callRecordId
       callType
       callStartTime
       callEndTime

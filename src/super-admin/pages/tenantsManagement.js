@@ -114,10 +114,10 @@ const TenantsManagement = () => {
                     //     Name: "company",
                     //     Value: company,
                     // },
-                    // {
-                    //     Name: "phone_number",
-                    //     Value: phone,
-                    // },
+                    {
+                         Name: "phone_number",
+                         Value: phone,
+                     },
                     {
                         Name: "custom:tenantId",
                         Value: "tenantId1",

@@ -19,7 +19,7 @@
       "function": {
         "AdminQueriescecc2b38": {
           "deploymentBucketName": "amplify-presolvedteamsadmin-develop-201120-deployment",
-          "s3Key": "amplify-builds/AdminQueriescecc2b38-6e797051694a73665a6a-build.zip"
+          "s3Key": "amplify-builds/AdminQueriescecc2b38-6b452b384d3052473379-build.zip"
         },
         "MSTeamsClientsAPI": {
           "secretsPathAmplifyAppId": "d2sg3m2pawykox",
@@ -29,9 +29,9 @@
         },
         "graphQlLambdaAuthorizerd08aa087": {},
         "downloadPSTNCallLogs": {
-          "msGraphSecretKeyName": "presolved/reports/key",
           "deploymentBucketName": "amplify-presolvedteamsadmin-develop-201120-deployment",
-          "s3Key": "amplify-builds/downloadPSTNCallLogs-6f374e5049734a796e6b-build.zip"
+          "s3Key": "amplify-builds/downloadPSTNCallLogs-4877392b396f4d764f54-build.zip",
+          "msGraphSecretKeyName": "presolved/reports/key"
         }
       },
       "api": {
